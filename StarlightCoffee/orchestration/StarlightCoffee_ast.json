@@ -1,0 +1,804 @@
+{
+    "nodeType": "Folder",
+    "files": [
+        {
+            "nodeType": "File",
+            "fileName": "test",
+            "fileExtension": ".mjs",
+            "nodes": [
+                {
+                    "nodeType": "IntegrationTestBoilerplate",
+                    "contractName": "StarlightCoffeeShield",
+                    "functions": [
+                        {
+                            "nodeType": "IntegrationTestFunction",
+                            "name": "addPoints",
+                            "parameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "user",
+                                        "id": 18,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "address"
+                                        }
+                                    },
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "points",
+                                        "id": 20,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "uint256"
+                                        }
+                                    }
+                                ],
+                                "modifiedStateVariables": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "mapping(address => uint256)"
+                                        }
+                                    }
+                                ]
+                            },
+                            "decrementsSecretState": false,
+                            "newCommitmentsRequired": true
+                        },
+                        {
+                            "nodeType": "IntegrationTestFunction",
+                            "name": "spendPoints",
+                            "parameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "user",
+                                        "id": 39,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "address"
+                                        }
+                                    },
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "points",
+                                        "id": 41,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "uint256"
+                                        }
+                                    }
+                                ],
+                                "modifiedStateVariables": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "mapping(address => uint256)"
+                                        }
+                                    }
+                                ]
+                            },
+                            "decrementsSecretState": true,
+                            "newCommitmentsRequired": true
+                        }
+                    ],
+                    "constructorParams": []
+                }
+            ]
+        },
+        {
+            "nodeType": "SetupCommonFilesBoilerplate",
+            "contractName": "StarlightCoffeeShield",
+            "functionNames": [
+                "addPoints",
+                "spendPoints"
+            ],
+            "constructorParams": []
+        },
+        {
+            "nodeType": "File",
+            "fileName": "api_services",
+            "fileExtension": ".mjs",
+            "nodes": [
+                {
+                    "nodeType": "IntegrationApiServicesBoilerplate",
+                    "contractName": "StarlightCoffeeShield",
+                    "functions": [
+                        {
+                            "nodeType": "IntegrationApiServiceFunction",
+                            "name": "addPoints",
+                            "parameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "user",
+                                        "id": 18,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "address"
+                                        }
+                                    },
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "points",
+                                        "id": 20,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "uint256"
+                                        }
+                                    }
+                                ],
+                                "modifiedStateVariables": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "mapping(address => uint256)"
+                                        }
+                                    }
+                                ]
+                            },
+                            "returnParameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [],
+                                "modifiedStateVariables": []
+                            },
+                            "decrementsSecretState": [],
+                            "newCommitmentsRequired": true
+                        },
+                        {
+                            "nodeType": "IntegrationApiServiceFunction",
+                            "name": "spendPoints",
+                            "parameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "user",
+                                        "id": 39,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "address"
+                                        }
+                                    },
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "points",
+                                        "id": 41,
+                                        "isSecret": true,
+                                        "interactsWithSecret": true,
+                                        "declarationType": "parameter",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "uint256"
+                                        }
+                                    }
+                                ],
+                                "modifiedStateVariables": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName",
+                                            "name": "mapping(address => uint256)"
+                                        }
+                                    }
+                                ]
+                            },
+                            "returnParameters": {
+                                "nodeType": "ParameterList",
+                                "parameters": [],
+                                "modifiedStateVariables": []
+                            },
+                            "decrementsSecretState": [
+                                "balances_user"
+                            ],
+                            "newCommitmentsRequired": true
+                        }
+                    ],
+                    "constructorParams": [],
+                    "contractImports": []
+                }
+            ]
+        },
+        {
+            "nodeType": "File",
+            "fileName": "api_routes",
+            "fileExtension": ".mjs",
+            "nodes": [
+                {
+                    "nodeType": "IntegrationApiRoutesBoilerplate",
+                    "contractName": "StarlightCoffeeShield",
+                    "functions": [
+                        {
+                            "nodeType": "IntegrationApiRoutesFunction",
+                            "name": "addPoints"
+                        },
+                        {
+                            "nodeType": "IntegrationApiRoutesFunction",
+                            "name": "spendPoints"
+                        }
+                    ],
+                    "contractImports": []
+                }
+            ]
+        },
+        {
+            "nodeType": "EditableCommitmentCommonFilesBoilerplate"
+        },
+        {
+            "nodeType": "File",
+            "fileName": "addPoints",
+            "fileExtension": ".mjs",
+            "nodes": [
+                {
+                    "nodeType": "Imports",
+                    "imports": []
+                },
+                {
+                    "nodeType": "FunctionDefinition",
+                    "name": "addPoints",
+                    "contractName": "StarlightCoffeeShield",
+                    "parameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "user",
+                                "id": 18,
+                                "isSecret": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "address"
+                                }
+                            },
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "points",
+                                "id": 20,
+                                "isSecret": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "uint256"
+                                }
+                            }
+                        ],
+                        "modifiedStateVariables": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "balances_user",
+                                "id": 0,
+                                "isSecret": true,
+                                "declarationType": "state",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "mapping(address => uint256)"
+                                }
+                            }
+                        ]
+                    },
+                    "body": {
+                        "nodeType": "Block",
+                        "preStatements": [
+                            {
+                                "nodeType": "InitialiseKeys",
+                                "contractName": "StarlightCoffeeShield",
+                                "onChainKeyRegistry": true
+                            },
+                            {
+                                "nodeType": "InitialisePreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "accessedOnly": false,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "structProperties": null
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "ReadPreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "increment": "parseInt(points.integer, 10)",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "structProperties": null,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "nullifierRequired": true,
+                                        "accessedOnly": false,
+                                        "initialised": true,
+                                        "isOwned": true,
+                                        "owner": "owner",
+                                        "ownerIsParam": false
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield"
+                            },
+                            {
+                                "nodeType": "MembershipWitness",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "accessedOnly": false,
+                                        "isWhole": true
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield"
+                            }
+                        ],
+                        "statements": [
+                            {
+                                "nodeType": "VariableDeclarationStatement",
+                                "id": 35,
+                                "interactsWithSecret": true,
+                                "declarations": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "isAccessed": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName"
+                                        }
+                                    }
+                                ],
+                                "initialValue": {
+                                    "nodeType": "Assignment",
+                                    "operator": "+=",
+                                    "leftHandSide": {
+                                        "nodeType": "Identifier",
+                                        "name": "balances_user",
+                                        "subType": "uint256"
+                                    },
+                                    "rightHandSide": {
+                                        "nodeType": "Identifier",
+                                        "name": "points",
+                                        "subType": "uint256"
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "leftHandSide": {
+                                    "nodeType": "Identifier",
+                                    "name": "balances_user",
+                                    "subType": ""
+                                },
+                                "rightHandSide": {
+                                    "nodeType": "Identifier",
+                                    "name": "balances_user",
+                                    "subType": "generalNumber"
+                                }
+                            }
+                        ],
+                        "postStatements": [
+                            {
+                                "nodeType": "CalculateNullifier",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "accessedOnly": false,
+                                        "isWhole": true
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "CalculateCommitment",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "nullifierRequired": true,
+                                        "structProperties": null,
+                                        "isOwned": true,
+                                        "owner": "owner"
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "GenerateProof",
+                                "circuitName": "addPoints",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "accessedOnly": false,
+                                        "nullifierRequired": true,
+                                        "increment": [
+                                            {
+                                                "name": "points",
+                                                "precedingOperator": "+"
+                                            }
+                                        ],
+                                        "structProperties": null,
+                                        "isMapping": true,
+                                        "isWhole": true,
+                                        "isOwned": true,
+                                        "initialisationRequired": true,
+                                        "owner": "owner"
+                                    }
+                                },
+                                "parameters": [
+                                    "balances_user",
+                                    "user",
+                                    "points"
+                                ]
+                            },
+                            {
+                                "nodeType": "SendTransaction",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "isWhole": true,
+                                        "accessedOnly": false,
+                                        "nullifierRequired": true
+                                    }
+                                },
+                                "functionName": "addPoints",
+                                "contractName": "StarlightCoffeeShield",
+                                "publicInputs": []
+                            },
+                            {
+                                "nodeType": "WritePreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "structProperties": null,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "nullifierRequired": true,
+                                        "isOwned": true,
+                                        "owner": "owner"
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield",
+                                "onChainKeyRegistry": true
+                            }
+                        ]
+                    },
+                    "returnParameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [],
+                        "modifiedStateVariables": []
+                    }
+                }
+            ]
+        },
+        {
+            "nodeType": "File",
+            "fileName": "spendPoints",
+            "fileExtension": ".mjs",
+            "nodes": [
+                {
+                    "nodeType": "Imports",
+                    "imports": []
+                },
+                {
+                    "nodeType": "FunctionDefinition",
+                    "name": "spendPoints",
+                    "contractName": "StarlightCoffeeShield",
+                    "parameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "user",
+                                "id": 39,
+                                "isSecret": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "address"
+                                }
+                            },
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "points",
+                                "id": 41,
+                                "isSecret": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "uint256"
+                                }
+                            }
+                        ],
+                        "modifiedStateVariables": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "balances_user",
+                                "id": 0,
+                                "isSecret": true,
+                                "declarationType": "state",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "mapping(address => uint256)"
+                                }
+                            }
+                        ]
+                    },
+                    "body": {
+                        "nodeType": "Block",
+                        "preStatements": [
+                            {
+                                "nodeType": "InitialiseKeys",
+                                "contractName": "StarlightCoffeeShield",
+                                "onChainKeyRegistry": true
+                            },
+                            {
+                                "nodeType": "InitialisePreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "accessedOnly": false,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "structProperties": null
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "ReadPreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "increment": "parseInt(points.integer, 10)",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "structProperties": null,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "nullifierRequired": true,
+                                        "accessedOnly": false,
+                                        "initialised": true,
+                                        "isOwned": true,
+                                        "owner": "owner",
+                                        "ownerIsParam": false
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield"
+                            },
+                            {
+                                "nodeType": "MembershipWitness",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "accessedOnly": false,
+                                        "isWhole": true
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield"
+                            }
+                        ],
+                        "statements": [
+                            {
+                                "nodeType": "VariableDeclarationStatement",
+                                "id": 56,
+                                "interactsWithSecret": true,
+                                "declarations": [
+                                    {
+                                        "nodeType": "VariableDeclaration",
+                                        "name": "balances_user",
+                                        "id": 0,
+                                        "isSecret": true,
+                                        "isAccessed": true,
+                                        "declarationType": "state",
+                                        "typeName": {
+                                            "nodeType": "ElementaryTypeName"
+                                        }
+                                    }
+                                ],
+                                "initialValue": {
+                                    "nodeType": "Assignment",
+                                    "operator": "-=",
+                                    "leftHandSide": {
+                                        "nodeType": "Identifier",
+                                        "name": "balances_user",
+                                        "subType": "uint256"
+                                    },
+                                    "rightHandSide": {
+                                        "nodeType": "Identifier",
+                                        "name": "points",
+                                        "subType": "uint256"
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "leftHandSide": {
+                                    "nodeType": "Identifier",
+                                    "name": "balances_user",
+                                    "subType": ""
+                                },
+                                "rightHandSide": {
+                                    "nodeType": "Identifier",
+                                    "name": "balances_user",
+                                    "subType": "generalNumber"
+                                }
+                            }
+                        ],
+                        "postStatements": [
+                            {
+                                "nodeType": "CalculateNullifier",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "accessedOnly": false,
+                                        "isWhole": true
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "CalculateCommitment",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "nullifierRequired": true,
+                                        "structProperties": null,
+                                        "isOwned": true,
+                                        "owner": "owner"
+                                    }
+                                }
+                            },
+                            {
+                                "nodeType": "GenerateProof",
+                                "circuitName": "spendPoints",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "privateStateName": "balances_user",
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "accessedOnly": false,
+                                        "nullifierRequired": true,
+                                        "increment": [
+                                            {
+                                                "name": "points",
+                                                "precedingOperator": "-"
+                                            }
+                                        ],
+                                        "structProperties": null,
+                                        "isMapping": true,
+                                        "isWhole": true,
+                                        "isOwned": true,
+                                        "initialisationRequired": true,
+                                        "owner": "owner"
+                                    }
+                                },
+                                "parameters": [
+                                    "balances_user",
+                                    "user",
+                                    "points"
+                                ]
+                            },
+                            {
+                                "nodeType": "SendTransaction",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "isWhole": true,
+                                        "accessedOnly": false,
+                                        "nullifierRequired": true
+                                    }
+                                },
+                                "functionName": "spendPoints",
+                                "contractName": "StarlightCoffeeShield",
+                                "publicInputs": []
+                            },
+                            {
+                                "nodeType": "WritePreimage",
+                                "privateStates": {
+                                    "balances_user": {
+                                        "stateVarId": [
+                                            7,
+                                            "user"
+                                        ],
+                                        "isWhole": true,
+                                        "structProperties": null,
+                                        "mappingKey": "user",
+                                        "mappingName": "balances",
+                                        "nullifierRequired": true,
+                                        "isOwned": true,
+                                        "owner": "owner"
+                                    }
+                                },
+                                "contractName": "StarlightCoffeeShield",
+                                "onChainKeyRegistry": true
+                            }
+                        ]
+                    },
+                    "returnParameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [],
+                        "modifiedStateVariables": []
+                    },
+                    "decrementedSecretStates": [
+                        "balances_user"
+                    ],
+                    "decrementsSecretState": true
+                }
+            ]
+        }
+    ]
+}

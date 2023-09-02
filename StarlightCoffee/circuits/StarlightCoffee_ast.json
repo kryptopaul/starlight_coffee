@@ -1,0 +1,827 @@
+{
+    "nodeType": "Folder",
+    "files": [
+        {
+            "nodeType": "File",
+            "fileName": "addPoints",
+            "fileId": 37,
+            "fileExtension": ".zok",
+            "nodes": [
+                {
+                    "nodeType": "ImportStatementList",
+                    "imports": [
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "mapping",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true,
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "PoKoSK",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "nullification",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentPreimage",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentExistence",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "newCommitment",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        }
+                    ]
+                },
+                {
+                    "nodeType": "FunctionDefinition",
+                    "name": "main",
+                    "body": {
+                        "nodeType": "Block",
+                        "preStatements": [
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ],
+                        "statements": [
+                            {
+                                "nodeType": "ExpressionStatement",
+                                "expression": {
+                                    "nodeType": "Assignment",
+                                    "operator": "=",
+                                    "leftHandSide": {
+                                        "nodeType": "IndexAccess",
+                                        "baseExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "balances",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "mapping(address => uint256)"
+                                            }
+                                        },
+                                        "indexExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "user",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "address"
+                                            }
+                                        }
+                                    },
+                                    "rightHandSide": {
+                                        "nodeType": "BinaryOperation",
+                                        "leftExpression": {
+                                            "nodeType": "IndexAccess",
+                                            "baseExpression": {
+                                                "nodeType": "Identifier",
+                                                "name": "balances",
+                                                "typeName": {
+                                                    "nodeType": "ElementaryTypeName",
+                                                    "name": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "indexExpression": {
+                                                "nodeType": "Identifier",
+                                                "name": "user",
+                                                "typeName": {
+                                                    "nodeType": "ElementaryTypeName",
+                                                    "name": "address"
+                                                }
+                                            }
+                                        },
+                                        "operator": "+",
+                                        "rightExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "points",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "uint256"
+                                            }
+                                        }
+                                    }
+                                },
+                                "isVarDec": false
+                            }
+                        ],
+                        "postStatements": [
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ]
+                    },
+                    "parameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "user",
+                                "isPrivate": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "field"
+                                }
+                            },
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "points",
+                                "isPrivate": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "field"
+                                }
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ]
+                    },
+                    "returnParameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": []
+                    }
+                }
+            ]
+        },
+        {
+            "nodeType": "File",
+            "fileName": "spendPoints",
+            "fileId": 58,
+            "fileExtension": ".zok",
+            "nodes": [
+                {
+                    "nodeType": "ImportStatementList",
+                    "imports": [
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "mapping",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true,
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "PoKoSK",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "nullification",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentPreimage",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentExistence",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "newCommitment",
+                            "name": "balances_user",
+                            "id": 7,
+                            "isWhole": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "isAccessed": true,
+                            "initialisationRequired": true
+                        }
+                    ]
+                },
+                {
+                    "nodeType": "FunctionDefinition",
+                    "name": "main",
+                    "body": {
+                        "nodeType": "Block",
+                        "preStatements": [
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ],
+                        "statements": [
+                            {
+                                "nodeType": "ExpressionStatement",
+                                "expression": {
+                                    "nodeType": "Assignment",
+                                    "operator": "=",
+                                    "leftHandSide": {
+                                        "nodeType": "IndexAccess",
+                                        "baseExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "balances",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "mapping(address => uint256)"
+                                            }
+                                        },
+                                        "indexExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "user",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "address"
+                                            }
+                                        }
+                                    },
+                                    "rightHandSide": {
+                                        "nodeType": "BinaryOperation",
+                                        "leftExpression": {
+                                            "nodeType": "IndexAccess",
+                                            "baseExpression": {
+                                                "nodeType": "Identifier",
+                                                "name": "balances",
+                                                "typeName": {
+                                                    "nodeType": "ElementaryTypeName",
+                                                    "name": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "indexExpression": {
+                                                "nodeType": "Identifier",
+                                                "name": "user",
+                                                "typeName": {
+                                                    "nodeType": "ElementaryTypeName",
+                                                    "name": "address"
+                                                }
+                                            }
+                                        },
+                                        "operator": "-",
+                                        "rightExpression": {
+                                            "nodeType": "Identifier",
+                                            "name": "points",
+                                            "typeName": {
+                                                "nodeType": "ElementaryTypeName",
+                                                "name": "uint256"
+                                            }
+                                        }
+                                    }
+                                },
+                                "isVarDec": false
+                            }
+                        ],
+                        "postStatements": [
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ]
+                    },
+                    "parameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "user",
+                                "isPrivate": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "field"
+                                }
+                            },
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "points",
+                                "isPrivate": true,
+                                "interactsWithSecret": true,
+                                "declarationType": "parameter",
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "field"
+                                }
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "mapping",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true,
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "nullification",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "newCommitment",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isWhole": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "isAccessed": true,
+                                "initialisationRequired": true
+                            }
+                        ]
+                    },
+                    "returnParameters": {
+                        "nodeType": "ParameterList",
+                        "parameters": []
+                    }
+                }
+            ]
+        }
+    ]
+}
