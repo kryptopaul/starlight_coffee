@@ -1,3 +1,8 @@
-proving-files
 node_modules
-.env
+*.DS_Store
+build/
+built/
+node_modules/
+proving-files/
+zapps/
+test-zapps/

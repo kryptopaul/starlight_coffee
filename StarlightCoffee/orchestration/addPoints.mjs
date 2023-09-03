@@ -65,7 +65,15 @@ export default async function addPoints(
 	const secretKey = generalise(keys.secretKey);
 	const publicKey = generalise(keys.publicKey);
 
-	// Initialise commitment preimage of whole state:
+	// read preimage for incremented state
+	balances_user_newOwnerPublicKey =
+		_balances_user_newOwnerPublicKey === 0
+			? generalise(
+					await instance.methods
+						.zkpPublicKeys(await instance.methods.owner().call())
+						.call()
+			  )
+			: balances_user_newOwnerPublicKey;
 
 	let balances_user_stateVarId = 7;
 
@@ -81,105 +89,11 @@ export default async function addPoints(
 		)
 	).hex(32);
 
-	let balances_user_commitmentExists = true;
-	let balances_user_witnessRequired = true;
-
-	const balances_user_commitment = await getCurrentWholeCommitment(
-		balances_user_stateVarId
+	const balances_user_newCommitmentValue = generalise(
+		parseInt(points.integer, 10)
 	);
 
-	let balances_user_preimage = {
-		value: 0,
-		salt: 0,
-		commitment: 0,
-	};
-	if (!balances_user_commitment) {
-		balances_user_commitmentExists = false;
-		balances_user_witnessRequired = false;
-	} else {
-		balances_user_preimage = balances_user_commitment.preimage;
-	}
-
-	// read preimage for whole state
-	balances_user_newOwnerPublicKey =
-		_balances_user_newOwnerPublicKey === 0
-			? generalise(
-					await instance.methods
-						.zkpPublicKeys(await instance.methods.owner().call())
-						.call()
-			  )
-			: balances_user_newOwnerPublicKey;
-
-	const balances_user_currentCommitment = balances_user_commitmentExists
-		? generalise(balances_user_commitment._id)
-		: generalise(0);
-	const balances_user_prev = generalise(balances_user_preimage.value);
-	const balances_user_prevSalt = generalise(balances_user_preimage.salt);
-
-	// Extract set membership witness:
-
-	// generate witness for whole state
-	const balances_user_emptyPath = new Array(32).fill(0);
-	const balances_user_witness = balances_user_witnessRequired
-		? await getMembershipWitness(
-				"StarlightCoffeeShield",
-				balances_user_currentCommitment.integer
-		  )
-		: {
-				index: 0,
-				path: balances_user_emptyPath,
-				root: (await getRoot("StarlightCoffeeShield")) || 0,
-		  };
-	const balances_user_index = generalise(balances_user_witness.index);
-	const balances_user_root = generalise(balances_user_witness.root);
-	const balances_user_path = generalise(balances_user_witness.path).all;
-
-	let balances_user = generalise(balances_user_preimage.value);
-	balances_user =
-		parseInt(balances_user.integer, 10) + parseInt(points.integer, 10);
-
-	balances_user = generalise(balances_user);
-
-	// Calculate nullifier(s):
-
-	let balances_user_nullifier = balances_user_commitmentExists
-		? poseidonHash([
-				BigInt(balances_user_stateVarId),
-				BigInt(secretKey.hex(32)),
-				BigInt(balances_user_prevSalt.hex(32)),
-		  ])
-		: poseidonHash([
-				BigInt(balances_user_stateVarId),
-				BigInt(generalise(0).hex(32)),
-				BigInt(balances_user_prevSalt.hex(32)),
-		  ]);
-
-	balances_user_nullifier = generalise(balances_user_nullifier.hex(32)); // truncate
-
-	// Non-membership witness for Nullifier
-	const balances_user_nullifier_NonMembership_witness = getnullifierMembershipWitness(
-		balances_user_nullifier
-	);
-
-	const balances_user_nullifierRoot = generalise(
-		balances_user_nullifier_NonMembership_witness.root
-	);
-	const balances_user_nullifier_path = generalise(
-		balances_user_nullifier_NonMembership_witness.path
-	).all;
-
-	await temporaryUpdateNullifier(balances_user_nullifier);
-
-	// Get the new updated nullifier Paths
-	const balances_user_updated_nullifier_NonMembership_witness = getupdatedNullifierPaths(
-		balances_user_nullifier
-	);
-	const balances_user_nullifier_updatedpath = generalise(
-		balances_user_updated_nullifier_NonMembership_witness.path
-	).all;
-	const balances_user_newNullifierRoot = generalise(
-		balances_user_updated_nullifier_NonMembership_witness.root
-	);
+	// increment would go here but has been filtered out
 
 	// Calculate commitment(s):
 
@@ -187,7 +101,7 @@ export default async function addPoints(
 
 	let balances_user_newCommitment = poseidonHash([
 		BigInt(balances_user_stateVarId),
-		BigInt(balances_user.hex(32)),
+		BigInt(balances_user_newCommitmentValue.hex(32)),
 		BigInt(balances_user_newOwnerPublicKey.hex(32)),
 		BigInt(balances_user_newSalt.hex(32)),
 	]);
@@ -199,36 +113,33 @@ export default async function addPoints(
 	const allInputs = [
 		user.integer,
 		points.integer,
-		balances_user_commitmentExists ? secretKey.integer : generalise(0).integer,
-		balances_user_nullifierRoot.integer,
-		balances_user_newNullifierRoot.integer,
-		balances_user_nullifier.integer,
-		balances_user_nullifier_path.integer,
-		balances_user_nullifier_updatedpath.integer,
-		balances_user_prev.integer,
-		balances_user_prevSalt.integer,
-		balances_user_commitmentExists ? 0 : 1,
-		balances_user_root.integer,
-		balances_user_index.integer,
-		balances_user_path.integer,
-		balances_user_newOwnerPublicKey.integer,
+
 		balances_user_newSalt.integer,
 		balances_user_newCommitment.integer,
+		generalise(utils.randomHex(31)).integer,
+		[
+			decompressStarlightKey(balances_user_newOwnerPublicKey)[0].integer,
+			decompressStarlightKey(balances_user_newOwnerPublicKey)[1].integer,
+		],
 	].flat(Infinity);
 	const res = await generateProof("addPoints", allInputs);
 	const proof = generalise(Object.values(res.proof).flat(Infinity))
 		.map((coeff) => coeff.integer)
 		.flat(Infinity);
+	const balances_user_cipherText = res.inputs
+		.slice(-5, -2)
+		.map((e) => generalise(e).integer);
+	const balances_user_encKey = res.inputs
+		.slice(-2)
+		.map((e) => generalise(e).integer);
 
 	// Send transaction to the blockchain:
 
 	const txData = await instance.methods
 		.addPoints(
-			balances_user_nullifierRoot.integer,
-			balances_user_newNullifierRoot.integer,
-			[balances_user_nullifier.integer],
-			balances_user_root.integer,
 			[balances_user_newCommitment.integer],
+			[balances_user_cipherText],
+			[balances_user_encKey],
 			proof
 		)
 		.encodeABI();
@@ -268,17 +179,13 @@ export default async function addPoints(
 
 	// Write new commitment preimage to db:
 
-	if (balances_user_commitmentExists)
-		await markNullified(balances_user_currentCommitment, secretKey.hex(32));
-	else await updateNullifierTree(); // Else we always update it in markNullified
-
 	await storeCommitment({
 		hash: balances_user_newCommitment,
 		name: "balances",
 		mappingKey: balances_user_stateVarId_key.integer,
 		preimage: {
 			stateVarId: generalise(balances_user_stateVarId),
-			value: balances_user,
+			value: balances_user_newCommitmentValue,
 			salt: balances_user_newSalt,
 			publicKey: balances_user_newOwnerPublicKey,
 		},

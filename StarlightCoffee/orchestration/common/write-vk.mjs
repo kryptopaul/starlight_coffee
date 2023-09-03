@@ -7,7 +7,7 @@ import yargs from "yargs";
 
 // const { generalise } = GN;
 const { argv } = yargs.usage("Usage: $0 -i <input file>").demandOption(["i"]);
-const functionNames = ["addPoints", "spendPoints"];
+const functionNames = ["addPoints", "spendPoints", "joinCommitments"];
 
 const readFile = (filePath) => {
 	if (fs.existsSync(filePath)) {

@@ -4,7 +4,7 @@ const Pairing = artifacts.require("Pairing");
 const Verifier = artifacts.require("Verifier");
 
 const StarlightCoffeeShield = artifacts.require("StarlightCoffeeShield");
-const functionNames = ["addPoints", "spendPoints"];
+const functionNames = ["addPoints", "spendPoints", "joinCommitments"];
 const vkInput = [];
 let vk = [];
 functionNames.forEach((name) => {

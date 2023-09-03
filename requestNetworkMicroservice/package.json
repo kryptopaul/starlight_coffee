@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@requestnetwork/epk-signature": "^0.5.36-next.1918",
+    "@requestnetwork/payment-processor": "^0.38.1-next.1918",
+    "@requestnetwork/request-client.js": "^0.40.1-next.1918",
+    "@requestnetwork/web3-signature": "^0.4.37-next.1918",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "web3": "^4.1.1"
+  }
+}

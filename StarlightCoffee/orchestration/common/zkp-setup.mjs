@@ -8,7 +8,7 @@ import { generateKeys } from "./zokrates.mjs";
 
 // const { generalise } = GN;
 const { argv } = yargs.usage("Usage: $0 -i <input file>").demandOption(["i"]);
-const functionNames = ["addPoints", "spendPoints"];
+const functionNames = ["addPoints", "spendPoints", "joinCommitments"];
 
 export const setup = async (functionName) => {
 	if (!functionName) {

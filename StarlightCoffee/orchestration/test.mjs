@@ -52,10 +52,7 @@ describe("StarlightCoffeeShield", async function () {
 					await startEventFilter("StarlightCoffeeShield");
 					// this calls your function! It returns the tx from the shield contract
 					// you can replace the values below - numbers are randomly generated
-					const { tx, encEvent } = await addPoints(
-						config.web3.options.defaultAccount,
-						130
-					);
+					const { tx, encEvent } = await addPoints(137, 172);
 					// prints the tx
 					console.log(tx);
 					// reassigns leafIndex to the index of the first commitment added by this function
@@ -77,6 +74,34 @@ describe("StarlightCoffeeShield", async function () {
 					process.exit(1);
 				}
 			});
+
+			it("should recieve and decrypt messages", async () => {
+				try {
+					const { secretKey } = JSON.parse(
+						fs.readFileSync(
+							"/app/orchestration/common/db/key.json",
+							"utf-8",
+							(err) => {
+								console.log(err);
+							}
+						)
+					);
+					const plainText = decrypt(encryption.msgs, secretKey, encryption.key);
+					console.log("Decrypted plainText:");
+					console.log(plainText);
+					const salt = plainText[plainText.length - 1];
+					const commitmentSet = await getAllCommitments();
+					const thisCommit = commitmentSet.find(
+						(c) =>
+							generalise(c.preimage.salt).integer === generalise(salt).integer
+					);
+					assert.equal(!!thisCommit, true);
+				} catch (err) {
+					logger.error(err);
+					process.exit(1);
+				}
+			});
+
 			it("should update the merkle tree", async () => {
 				try {
 					// this is the path from your new commitment to the root of the tree - it's needed to show the commitment exists when you want to edit your secret state
@@ -95,10 +120,7 @@ describe("StarlightCoffeeShield", async function () {
 			it("should call addPoints again", async () => {
 				try {
 					// this calls your function a second time for incremental cases
-					const { tx } = await addPoints(
-						config.web3.options.defaultAccount,
-						99
-					);
+					const { tx } = await addPoints(85, 63);
 					if (tx.event) {
 						console.log(`Merkle tree event returnValues:`);
 						console.log(tx.returnValues[0]);
@@ -128,10 +150,7 @@ describe("StarlightCoffeeShield", async function () {
 					await startEventFilter("StarlightCoffeeShield");
 					// this calls your function! It returns the tx from the shield contract
 					// you can replace the values below - numbers are randomly generated
-					const { tx, encEvent } = await spendPoints(
-						config.web3.options.defaultAccount,
-						162
-					);
+					const { tx, encEvent } = await spendPoints(108, 4);
 					// prints the tx
 					console.log(tx);
 					// reassigns leafIndex to the index of the first commitment added by this function

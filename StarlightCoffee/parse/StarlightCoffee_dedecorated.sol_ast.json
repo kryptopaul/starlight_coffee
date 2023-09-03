@@ -62,7 +62,7 @@
                 },
                 {
                     "constant": false,
-                    "functionSelector": "27e235e3",
+                    "functionSelector": "4903b0d1",
                     "id": 7,
                     "mutability": "mutable",
                     "name": "balances",
@@ -72,26 +72,26 @@
                     "stateVariable": true,
                     "storageLocation": "default",
                     "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                        "typeString": "mapping(address => uint256)"
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                        "typeString": "mapping(uint256 => uint256)"
                     },
                     "typeName": {
                         "id": 6,
                         "keyType": {
                             "id": 4,
-                            "name": "address",
+                            "name": "uint256",
                             "nodeType": "ElementaryTypeName",
                             "src": "137:7:0",
                             "typeDescriptions": {
-                                "typeIdentifier": "t_address",
-                                "typeString": "address"
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
                             }
                         },
                         "nodeType": "Mapping",
                         "src": "129:27:0",
                         "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                            "typeString": "mapping(address => uint256)"
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                            "typeString": "mapping(uint256 => uint256)"
                         },
                         "valueType": {
                             "id": 5,
@@ -317,8 +317,8 @@
                                             "referencedDeclaration": 7,
                                             "src": "310:8:0",
                                             "typeDescriptions": {
-                                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                                                "typeString": "mapping(address => uint256)"
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                                                "typeString": "mapping(uint256 => uint256)"
                                             }
                                         },
                                         "id": 32,
@@ -330,8 +330,8 @@
                                             "referencedDeclaration": 18,
                                             "src": "319:4:0",
                                             "typeDescriptions": {
-                                                "typeIdentifier": "t_address",
-                                                "typeString": "address"
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
                                             }
                                         },
                                         "isConstant": false,
@@ -371,7 +371,7 @@
                             }
                         ]
                     },
-                    "functionSelector": "507cd30f",
+                    "functionSelector": "fe4651a0",
                     "id": 37,
                     "implemented": true,
                     "kind": "function",
@@ -393,18 +393,17 @@
                                 "stateVariable": false,
                                 "storageLocation": "default",
                                 "typeDescriptions": {
-                                    "typeIdentifier": "t_address",
-                                    "typeString": "address"
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
                                 },
                                 "typeName": {
                                     "id": 17,
-                                    "name": "address",
+                                    "name": "uint256",
                                     "nodeType": "ElementaryTypeName",
                                     "src": "239:7:0",
-                                    "stateMutability": "nonpayable",
                                     "typeDescriptions": {
-                                        "typeIdentifier": "t_address",
-                                        "typeString": "address"
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
                                     }
                                 },
                                 "visibility": "internal"
@@ -572,8 +571,8 @@
                                             "referencedDeclaration": 7,
                                             "src": "434:8:0",
                                             "typeDescriptions": {
-                                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                                                "typeString": "mapping(address => uint256)"
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                                                "typeString": "mapping(uint256 => uint256)"
                                             }
                                         },
                                         "id": 53,
@@ -585,8 +584,8 @@
                                             "referencedDeclaration": 39,
                                             "src": "443:4:0",
                                             "typeDescriptions": {
-                                                "typeIdentifier": "t_address",
-                                                "typeString": "address"
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
                                             }
                                         },
                                         "isConstant": false,
@@ -626,7 +625,7 @@
                             }
                         ]
                     },
-                    "functionSelector": "918d2428",
+                    "functionSelector": "15ea7bb4",
                     "id": 58,
                     "implemented": true,
                     "kind": "function",
@@ -648,18 +647,17 @@
                                 "stateVariable": false,
                                 "storageLocation": "default",
                                 "typeDescriptions": {
-                                    "typeIdentifier": "t_address",
-                                    "typeString": "address"
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
                                 },
                                 "typeName": {
                                     "id": 38,
-                                    "name": "address",
+                                    "name": "uint256",
                                     "nodeType": "ElementaryTypeName",
                                     "src": "363:7:0",
-                                    "stateMutability": "nonpayable",
                                     "typeDescriptions": {
-                                        "typeIdentifier": "t_address",
-                                        "typeString": "address"
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
                                     }
                                 },
                                 "visibility": "internal"

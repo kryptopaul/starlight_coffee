@@ -1,132 +1,73 @@
 from "./common/hashes/mimc/altbn254/mimc2.zok" import main as mimc2
+from "utils/pack/bool/nonStrictUnpack256.zok" import main as field_to_bool_256
+from "hashes/poseidon/poseidon.zok" import main as poseidon
+from "ecc/babyjubjubParams" import BabyJubJubParams
 from "ecc/babyjubjubParams" import main as curveParams
 from "ecc/edwardsScalarMult" import main as scalarMult
 from "ecc/edwardsCompress" import main as edwardsCompress
 from "utils/pack/bool/pack256.zok" import main as bool_256_to_field
-from "utils/pack/bool/nonStrictUnpack256.zok" import main as field_to_bool_256
-from "hashes/poseidon/poseidon.zok" import main as poseidon
-from "./common/merkle-tree/sparse-merkle-tree/checkproof.zok" import main as checkproof
-from "./common/merkle-tree/sparse-merkle-tree/checkproof.zok" import checkUpdatedPath as checkUpdatedPath
-from "./common/merkle-tree/mimc/altbn254/verify-membership/height32.zok" import main as checkRoot
+from "utils/casts/u32_to_field" import main as u32_to_field
+from "./common/encryption/kem-dem.zok" import main as enc
+from "./common/encryption/kem-dem.zok" import EncryptedMsgs as EncryptedMsgs
 
 def main(\
 	private field user,\
 	private field points,\
-	private field balances_user_oldCommitment_owner_secretKey,\
-	public field nullifierRoot,\
-	public field newNullifierRoot,\
-	public field balances_user_oldCommitment_nullifier,\
-	private field[32] balances_user_nullifier_nonmembershipWitness_siblingPath,\
-	private field[32] balances_user_nullifier_nonmembershipWitness_newsiblingPath,\
-	private  field balances_user_oldCommitment_value,\
-	private field balances_user_oldCommitment_salt,\
-	private bool balances_user_oldCommitment_isDummy,\
-	public field commitmentRoot,\
-	private field balances_user_oldCommitment_membershipWitness_index,\
-	private field[32] balances_user_oldCommitment_membershipWitness_siblingPath,\
-	private field balances_user_newCommitment_owner_publicKey,\
-	private field balances_user_newCommitment_salt,\
-	public field balances_user_newCommitment_commitment\
-) -> (bool):
+	private field balances_user_0_newCommitment_salt,\
+	public field balances_user_0_newCommitment_commitment,\
+	private field balances_user_0_newCommitment_ephSecretKey,\
+	private field[2] balances_user_0_newCommitment_owner_publicKey_point\
+) -> (EncryptedMsgs<3>):
 
         
         // We need to hard-code the mappingId's of mappings into the circuit:
         field balances_mappingId = 7
 
 
-        field balances_user = balances_user_oldCommitment_value
+        // calculate balances_user_0_newCommitment_owner_publicKey from its point
+        bool balances_user_0_newCommitment_owner_publicKey_sign = edwardsCompress(balances_user_0_newCommitment_owner_publicKey_point)[0]
 
-balances_user = balances_user + points
+        bool[254] balances_user_0_newCommitment_yBits = field_to_bool_256(balances_user_0_newCommitment_owner_publicKey_point[1])[2..256]
+        balances_user_0_newCommitment_yBits[0] = balances_user_0_newCommitment_owner_publicKey_sign
 
+        field balances_user_0_newCommitment_owner_publicKey = bool_256_to_field([false, false, ...balances_user_0_newCommitment_yBits])
 
-        field balances_user_stateVarId_field = mimc2([balances_mappingId, user])
-
-
-        // balances_user_oldCommitment - PoKoSK:
-        // The correctness of this secret key will be constrained within the oldCommitment existence check.
-
-        field[2] balances_user_oldCommitment_owner_publicKey_point = scalarMult(field_to_bool_256(balances_user_oldCommitment_owner_secretKey), [curveParams().Gu, curveParams().Gv], curveParams())
-
-        bool balances_user_oldCommitment_owner_publicKey_sign = edwardsCompress(balances_user_oldCommitment_owner_publicKey_point)[0]
-
-        bool[254] balances_user_oldCommitment_yBits = field_to_bool_256(balances_user_oldCommitment_owner_publicKey_point[1])[2..256]
-        balances_user_oldCommitment_yBits[0] = balances_user_oldCommitment_owner_publicKey_sign
-
-        field balances_user_oldCommitment_owner_publicKey = bool_256_to_field([false, false, ...balances_user_oldCommitment_yBits])
+// Skipping incrementation of balances_user
 
 
-        // Nullify balances_user:
+        field balances_user_0_stateVarId_field = mimc2([balances_mappingId, user])
 
-        field balances_user_oldCommitment_nullifier_check_field = poseidon([\
-          balances_user_stateVarId_field,\
-          balances_user_oldCommitment_owner_secretKey,\
-          balances_user_oldCommitment_salt\
+
+        field balances_user_1_stateVarId_field = mimc2([balances_mappingId, user])
+
+
+        // prepare secret state 'balances_user_0' for commitment
+
+        field balances_user_0_newCommitment_value_field = points
+
+        // balances_user_0_newCommitment_commitment - preimage check
+
+        field balances_user_0_newCommitment_commitment_check_field = poseidon([\
+          balances_user_0_stateVarId_field,\
+          balances_user_0_newCommitment_value_field,\
+          balances_user_0_newCommitment_owner_publicKey,\
+          balances_user_0_newCommitment_salt\
         ])
 
         assert(\
-        field_to_bool_256(balances_user_oldCommitment_nullifier)[8..256] == field_to_bool_256(balances_user_oldCommitment_nullifier_check_field)[8..256]\
-        )
-        // balances_user_oldCommitment_nullifier : non-existence check
-        
-        assert(\
-          nullifierRoot == checkproof(\
-            balances_user_nullifier_nonmembershipWitness_siblingPath,\
-            balances_user_oldCommitment_nullifier\
-           )       )
-
-       assert(\
-        newNullifierRoot == checkUpdatedPath(\
-          balances_user_nullifier_nonmembershipWitness_newsiblingPath,\
-          balances_user_oldCommitment_nullifier\
-        )        )
-
-        
-
-
-        // balances_user_oldCommitment_commitment: preimage check
-
-
-        field balances_user_oldCommitment_commitment_field = poseidon([\
-          balances_user_stateVarId_field,\
-          balances_user_oldCommitment_value,\
-          balances_user_oldCommitment_owner_publicKey,\
-          balances_user_oldCommitment_salt        ])
-
-
-        // balances_user_oldCommitment_commitment: existence check
-
-
-        field balances_user_commitmentRoot_check = checkRoot(\
-          balances_user_oldCommitment_membershipWitness_siblingPath,\
-          balances_user_oldCommitment_commitment_field,\
-          balances_user_oldCommitment_membershipWitness_index\
+          field_to_bool_256(balances_user_0_newCommitment_commitment)[8..256] == field_to_bool_256(balances_user_0_newCommitment_commitment_check_field)[8..256]\
         )
 
 
-        // Note: Don't bother actually asserting existence, if the oldCommitment is a dummy:
-        balances_user_commitmentRoot_check = if balances_user_oldCommitment_isDummy == true then commitmentRoot else balances_user_commitmentRoot_check fi
+        // balances_user_0_newCommitment encryption for owner
 
+        EncryptedMsgs<3> balances_user_0_cipherText = enc(\
+            field_to_bool_256(balances_user_0_newCommitment_ephSecretKey),\
+            balances_user_0_newCommitment_owner_publicKey_point,\
+            [\
+              balances_user_0_stateVarId_field,\
+              balances_user_0_newCommitment_value_field,\
+              balances_user_0_newCommitment_salt\
+            ])
 
-        assert(\
-          field_to_bool_256(commitmentRoot)[8..256] == field_to_bool_256(balances_user_commitmentRoot_check)[8..256]\
-        )
-
-
-        // prepare secret state 'balances_user' for commitment
-
-        field balances_user_newCommitment_value_field = balances_user
-
-        // balances_user_newCommitment_commitment - preimage check
-
-        field balances_user_newCommitment_commitment_check_field = poseidon([\
-          balances_user_stateVarId_field,\
-          balances_user_newCommitment_value_field,\
-          balances_user_newCommitment_owner_publicKey,\
-          balances_user_newCommitment_salt\
-        ])
-
-        assert(\
-          field_to_bool_256(balances_user_newCommitment_commitment)[8..256] == field_to_bool_256(balances_user_newCommitment_commitment_check_field)[8..256]\
-        )
-
-         return true
+         return balances_user_0_cipherText

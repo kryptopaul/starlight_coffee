@@ -38,11 +38,13 @@
                             "bpCategory": "contract",
                             "functionNames": [
                                 "addPoints",
-                                "spendPoints"
+                                "spendPoints",
+                                "joinCommitments"
                             ],
                             "nullifiersRequired": true,
                             "oldCommitmentAccessRequired": true,
-                            "newCommitmentsRequired": true
+                            "newCommitmentsRequired": true,
+                            "encryptionRequired": true
                         },
                         {
                             "nodeType": "ContractBoilerplate",
@@ -56,26 +58,30 @@
                             "nullifiersRequired": true,
                             "oldCommitmentAccessRequired": true,
                             "newCommitmentsRequired": true,
+                            "encryptionRequired": true,
                             "constructorContainsSecret": true,
                             "circuitParams": {
                                 "addPoints": {
                                     "parameters": [
-                                        "nullifierRoot",
-                                        "nullifier",
-                                        "oldCommitmentExistence",
                                         "newCommitment"
+                                    ],
+                                    "returnParameters": [
+                                        "encryption"
                                     ]
                                 },
                                 "spendPoints": {
                                     "parameters": [
                                         "nullifierRoot",
                                         "nullifier",
+                                        "nullifier",
                                         "oldCommitmentExistence",
                                         "newCommitment"
                                     ]
                                 }
                             },
-                            "isjoinCommitmentsFunction": []
+                            "isjoinCommitmentsFunction": [
+                                "true"
+                            ]
                         },
                         {
                             "nodeType": "VariableDeclaration",
@@ -99,14 +105,14 @@
                             "visibility": "public",
                             "storageLocation": "default",
                             "typeDescriptions": {
-                                "typeString": "mapping(address => uint256)"
+                                "typeString": "mapping(uint256 => uint256)"
                             },
                             "typeName": {
                                 "nodeType": "Mapping",
                                 "keyType": {
                                     "nodeType": "ElementaryTypeName",
                                     "typeDescriptions": {
-                                        "typeString": "address"
+                                        "typeString": "uint256"
                                     }
                                 },
                                 "valueType": {
@@ -216,19 +222,12 @@
                                         "nodeType": "FunctionBoilerplate",
                                         "bpSection": "postStatements",
                                         "bpCategory": "customFunction",
-                                        "customInputs": [
-                                            {
-                                                "name": 1,
-                                                "type": "uint256",
-                                                "dummy": true,
-                                                "inCircuit": true
-                                            }
-                                        ],
                                         "functionName": "addPoints",
-                                        "nullifiersRequired": true,
-                                        "oldCommitmentAccessRequired": true,
+                                        "nullifiersRequired": false,
+                                        "oldCommitmentAccessRequired": false,
                                         "newCommitmentsRequired": true,
-                                        "isConstructor": false
+                                        "isConstructor": false,
+                                        "encryptionRequired": true
                                     }
                                 ]
                             },
@@ -241,12 +240,12 @@
                                         "visibility": "internal",
                                         "storageLocation": "default",
                                         "typeDescriptions": {
-                                            "typeString": "address"
+                                            "typeString": "uint256"
                                         },
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
                                             "typeDescriptions": {
-                                                "typeString": "address"
+                                                "typeString": "uint256"
                                             }
                                         },
                                         "isSecret": true,
@@ -275,10 +274,11 @@
                                         "nodeType": "FunctionBoilerplate",
                                         "bpSection": "parameters",
                                         "bpCategory": "customFunction",
-                                        "nullifiersRequired": true,
-                                        "oldCommitmentAccessRequired": true,
+                                        "nullifiersRequired": false,
+                                        "oldCommitmentAccessRequired": false,
                                         "newCommitmentsRequired": true,
-                                        "isConstructor": false
+                                        "isConstructor": false,
+                                        "encryptionRequired": true
                                     }
                                 ]
                             },
@@ -357,12 +357,12 @@
                                         "visibility": "internal",
                                         "storageLocation": "default",
                                         "typeDescriptions": {
-                                            "typeString": "address"
+                                            "typeString": "uint256"
                                         },
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
                                             "typeDescriptions": {
-                                                "typeString": "address"
+                                                "typeString": "uint256"
                                             }
                                         },
                                         "isSecret": true,

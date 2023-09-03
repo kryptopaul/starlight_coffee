@@ -25,7 +25,7 @@
                                         "declarationType": "parameter",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "address"
+                                            "name": "uint256"
                                         }
                                     },
                                     {
@@ -50,12 +50,13 @@
                                         "declarationType": "state",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "mapping(address => uint256)"
+                                            "name": "mapping(uint256 => uint256)"
                                         }
                                     }
                                 ]
                             },
                             "decrementsSecretState": false,
+                            "encryptionRequired": true,
                             "newCommitmentsRequired": true
                         },
                         {
@@ -73,7 +74,7 @@
                                         "declarationType": "parameter",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "address"
+                                            "name": "uint256"
                                         }
                                     },
                                     {
@@ -98,7 +99,7 @@
                                         "declarationType": "state",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "mapping(address => uint256)"
+                                            "name": "mapping(uint256 => uint256)"
                                         }
                                     }
                                 ]
@@ -116,7 +117,8 @@
             "contractName": "StarlightCoffeeShield",
             "functionNames": [
                 "addPoints",
-                "spendPoints"
+                "spendPoints",
+                "joinCommitments"
             ],
             "constructorParams": []
         },
@@ -144,7 +146,7 @@
                                         "declarationType": "parameter",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "address"
+                                            "name": "uint256"
                                         }
                                     },
                                     {
@@ -169,7 +171,7 @@
                                         "declarationType": "state",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "mapping(address => uint256)"
+                                            "name": "mapping(uint256 => uint256)"
                                         }
                                     }
                                 ]
@@ -180,7 +182,8 @@
                                 "modifiedStateVariables": []
                             },
                             "decrementsSecretState": [],
-                            "newCommitmentsRequired": true
+                            "newCommitmentsRequired": true,
+                            "encryptionRequired": true
                         },
                         {
                             "nodeType": "IntegrationApiServiceFunction",
@@ -197,7 +200,7 @@
                                         "declarationType": "parameter",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "address"
+                                            "name": "uint256"
                                         }
                                     },
                                     {
@@ -222,7 +225,7 @@
                                         "declarationType": "state",
                                         "typeName": {
                                             "nodeType": "ElementaryTypeName",
-                                            "name": "mapping(address => uint256)"
+                                            "name": "mapping(uint256 => uint256)"
                                         }
                                     }
                                 ]
@@ -293,7 +296,7 @@
                                 "declarationType": "parameter",
                                 "typeName": {
                                     "nodeType": "ElementaryTypeName",
-                                    "name": "address"
+                                    "name": "uint256"
                                 }
                             },
                             {
@@ -318,7 +321,7 @@
                                 "declarationType": "state",
                                 "typeName": {
                                     "nodeType": "ElementaryTypeName",
-                                    "name": "mapping(address => uint256)"
+                                    "name": "mapping(uint256 => uint256)"
                                 }
                             }
                         ]
@@ -332,22 +335,6 @@
                                 "onChainKeyRegistry": true
                             },
                             {
-                                "nodeType": "InitialisePreimage",
-                                "privateStates": {
-                                    "balances_user": {
-                                        "privateStateName": "balances_user",
-                                        "stateVarId": [
-                                            7,
-                                            "user"
-                                        ],
-                                        "accessedOnly": false,
-                                        "mappingKey": "user",
-                                        "mappingName": "balances",
-                                        "structProperties": null
-                                    }
-                                }
-                            },
-                            {
                                 "nodeType": "ReadPreimage",
                                 "privateStates": {
                                     "balances_user": {
@@ -356,27 +343,14 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "structProperties": null,
                                         "mappingKey": "user",
                                         "mappingName": "balances",
-                                        "nullifierRequired": true,
-                                        "accessedOnly": false,
-                                        "initialised": true,
+                                        "nullifierRequired": false,
                                         "isOwned": true,
                                         "owner": "owner",
                                         "ownerIsParam": false
-                                    }
-                                },
-                                "contractName": "StarlightCoffeeShield"
-                            },
-                            {
-                                "nodeType": "MembershipWitness",
-                                "privateStates": {
-                                    "balances_user": {
-                                        "privateStateName": "balances_user",
-                                        "accessedOnly": false,
-                                        "isWhole": true
                                     }
                                 },
                                 "contractName": "StarlightCoffeeShield"
@@ -384,23 +358,9 @@
                         ],
                         "statements": [
                             {
-                                "nodeType": "VariableDeclarationStatement",
+                                "nodeType": "ExpressionStatement",
                                 "id": 35,
-                                "interactsWithSecret": true,
-                                "declarations": [
-                                    {
-                                        "nodeType": "VariableDeclaration",
-                                        "name": "balances_user",
-                                        "id": 0,
-                                        "isSecret": true,
-                                        "isAccessed": true,
-                                        "declarationType": "state",
-                                        "typeName": {
-                                            "nodeType": "ElementaryTypeName"
-                                        }
-                                    }
-                                ],
-                                "initialValue": {
+                                "expression": {
                                     "nodeType": "Assignment",
                                     "operator": "+=",
                                     "leftHandSide": {
@@ -413,33 +373,15 @@
                                         "name": "points",
                                         "subType": "uint256"
                                     }
-                                }
-                            },
-                            {
-                                "nodeType": "Assignment",
-                                "operator": "=",
-                                "leftHandSide": {
-                                    "nodeType": "Identifier",
-                                    "name": "balances_user",
-                                    "subType": ""
                                 },
-                                "rightHandSide": {
-                                    "nodeType": "Identifier",
-                                    "name": "balances_user",
-                                    "subType": "generalNumber"
-                                }
+                                "interactsWithSecret": true,
+                                "incrementsSecretState": true,
+                                "decrementsSecretState": false,
+                                "privateStateName": "balances_user",
+                                "increments": "parseInt(points.integer, 10)"
                             }
                         ],
                         "postStatements": [
-                            {
-                                "nodeType": "CalculateNullifier",
-                                "privateStates": {
-                                    "balances_user": {
-                                        "accessedOnly": false,
-                                        "isWhole": true
-                                    }
-                                }
-                            },
                             {
                                 "nodeType": "CalculateCommitment",
                                 "privateStates": {
@@ -449,8 +391,8 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
-                                        "nullifierRequired": true,
+                                        "isPartitioned": true,
+                                        "nullifierRequired": false,
                                         "structProperties": null,
                                         "isOwned": true,
                                         "owner": "owner"
@@ -467,8 +409,7 @@
                                             7,
                                             "user"
                                         ],
-                                        "accessedOnly": false,
-                                        "nullifierRequired": true,
+                                        "nullifierRequired": false,
                                         "increment": [
                                             {
                                                 "name": "points",
@@ -477,9 +418,10 @@
                                         ],
                                         "structProperties": null,
                                         "isMapping": true,
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "isOwned": true,
                                         "initialisationRequired": true,
+                                        "encryptionRequired": true,
                                         "owner": "owner"
                                     }
                                 },
@@ -493,9 +435,9 @@
                                 "nodeType": "SendTransaction",
                                 "privateStates": {
                                     "balances_user": {
-                                        "isWhole": true,
-                                        "accessedOnly": false,
-                                        "nullifierRequired": true
+                                        "isPartitioned": true,
+                                        "encryptionRequired": true,
+                                        "nullifierRequired": false
                                     }
                                 },
                                 "functionName": "addPoints",
@@ -510,11 +452,11 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "structProperties": null,
                                         "mappingKey": "user",
                                         "mappingName": "balances",
-                                        "nullifierRequired": true,
+                                        "nullifierRequired": false,
                                         "isOwned": true,
                                         "owner": "owner"
                                     }
@@ -557,7 +499,7 @@
                                 "declarationType": "parameter",
                                 "typeName": {
                                     "nodeType": "ElementaryTypeName",
-                                    "name": "address"
+                                    "name": "uint256"
                                 }
                             },
                             {
@@ -582,7 +524,7 @@
                                 "declarationType": "state",
                                 "typeName": {
                                     "nodeType": "ElementaryTypeName",
-                                    "name": "mapping(address => uint256)"
+                                    "name": "mapping(uint256 => uint256)"
                                 }
                             }
                         ]
@@ -597,19 +539,7 @@
                             },
                             {
                                 "nodeType": "InitialisePreimage",
-                                "privateStates": {
-                                    "balances_user": {
-                                        "privateStateName": "balances_user",
-                                        "stateVarId": [
-                                            7,
-                                            "user"
-                                        ],
-                                        "accessedOnly": false,
-                                        "mappingKey": "user",
-                                        "mappingName": "balances",
-                                        "structProperties": null
-                                    }
-                                }
+                                "privateStates": {}
                             },
                             {
                                 "nodeType": "ReadPreimage",
@@ -620,13 +550,11 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "structProperties": null,
                                         "mappingKey": "user",
                                         "mappingName": "balances",
                                         "nullifierRequired": true,
-                                        "accessedOnly": false,
-                                        "initialised": true,
                                         "isOwned": true,
                                         "owner": "owner",
                                         "ownerIsParam": false
@@ -639,8 +567,7 @@
                                 "privateStates": {
                                     "balances_user": {
                                         "privateStateName": "balances_user",
-                                        "accessedOnly": false,
-                                        "isWhole": true
+                                        "isPartitioned": true
                                     }
                                 },
                                 "contractName": "StarlightCoffeeShield"
@@ -648,23 +575,9 @@
                         ],
                         "statements": [
                             {
-                                "nodeType": "VariableDeclarationStatement",
+                                "nodeType": "ExpressionStatement",
                                 "id": 56,
-                                "interactsWithSecret": true,
-                                "declarations": [
-                                    {
-                                        "nodeType": "VariableDeclaration",
-                                        "name": "balances_user",
-                                        "id": 0,
-                                        "isSecret": true,
-                                        "isAccessed": true,
-                                        "declarationType": "state",
-                                        "typeName": {
-                                            "nodeType": "ElementaryTypeName"
-                                        }
-                                    }
-                                ],
-                                "initialValue": {
+                                "expression": {
                                     "nodeType": "Assignment",
                                     "operator": "-=",
                                     "leftHandSide": {
@@ -677,21 +590,12 @@
                                         "name": "points",
                                         "subType": "uint256"
                                     }
-                                }
-                            },
-                            {
-                                "nodeType": "Assignment",
-                                "operator": "=",
-                                "leftHandSide": {
-                                    "nodeType": "Identifier",
-                                    "name": "balances_user",
-                                    "subType": ""
                                 },
-                                "rightHandSide": {
-                                    "nodeType": "Identifier",
-                                    "name": "balances_user",
-                                    "subType": "generalNumber"
-                                }
+                                "interactsWithSecret": true,
+                                "incrementsSecretState": true,
+                                "decrementsSecretState": true,
+                                "privateStateName": "balances_user",
+                                "increments": "parseInt(points.integer, 10)"
                             }
                         ],
                         "postStatements": [
@@ -700,7 +604,7 @@
                                 "privateStates": {
                                     "balances_user": {
                                         "accessedOnly": false,
-                                        "isWhole": true
+                                        "isPartitioned": true
                                     }
                                 }
                             },
@@ -713,7 +617,7 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "nullifierRequired": true,
                                         "structProperties": null,
                                         "isOwned": true,
@@ -731,7 +635,6 @@
                                             7,
                                             "user"
                                         ],
-                                        "accessedOnly": false,
                                         "nullifierRequired": true,
                                         "increment": [
                                             {
@@ -741,7 +644,7 @@
                                         ],
                                         "structProperties": null,
                                         "isMapping": true,
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "isOwned": true,
                                         "initialisationRequired": true,
                                         "owner": "owner"
@@ -757,8 +660,7 @@
                                 "nodeType": "SendTransaction",
                                 "privateStates": {
                                     "balances_user": {
-                                        "isWhole": true,
-                                        "accessedOnly": false,
+                                        "isPartitioned": true,
                                         "nullifierRequired": true
                                     }
                                 },
@@ -774,7 +676,7 @@
                                             7,
                                             "user"
                                         ],
-                                        "isWhole": true,
+                                        "isPartitioned": true,
                                         "structProperties": null,
                                         "mappingKey": "user",
                                         "mappingName": "balances",

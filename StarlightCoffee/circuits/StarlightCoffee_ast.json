@@ -14,75 +14,62 @@
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "mapping",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
+                            "isPartitioned": true,
                             "isMapping": true,
-                            "isAccessed": true,
                             "initialisationRequired": true,
+                            "newCommitmentValue": "points",
                             "mappingName": "balances",
                             "mappingKeyName": "user"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
-                            "bpType": "PoKoSK",
-                            "name": "balances_user",
+                            "bpType": "mapping",
+                            "name": "balances_user_1",
                             "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
+                            "isPartitioned": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points",
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
-                            "bpType": "nullification",
-                            "name": "balances_user",
+                            "bpType": "mapping",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
+                            "isPartitioned": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
-                        },
-                        {
-                            "nodeType": "Boilerplate",
-                            "bpSection": "importStatements",
-                            "bpType": "oldCommitmentPreimage",
-                            "name": "balances_user",
-                            "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
-                            "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
-                        },
-                        {
-                            "nodeType": "Boilerplate",
-                            "bpSection": "importStatements",
-                            "bpType": "oldCommitmentExistence",
-                            "name": "balances_user",
-                            "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
-                            "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points",
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "newCommitment",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
-                            "isNullified": true,
+                            "isPartitioned": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "encryption",
+                            "name": "balances_user_0",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         }
                     ]
                 },
@@ -96,135 +83,81 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
-                                "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
-                                "bpType": "nullification",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "preStatements",
-                                "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "preStatements",
-                                "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "encryption",
+                                "name": "balances_user_0",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ],
                         "statements": [
                             {
-                                "nodeType": "ExpressionStatement",
-                                "expression": {
-                                    "nodeType": "Assignment",
-                                    "operator": "=",
-                                    "leftHandSide": {
-                                        "nodeType": "IndexAccess",
-                                        "baseExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "balances",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "mapping(address => uint256)"
-                                            }
-                                        },
-                                        "indexExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "user",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "address"
-                                            }
-                                        }
-                                    },
-                                    "rightHandSide": {
-                                        "nodeType": "BinaryOperation",
-                                        "leftExpression": {
-                                            "nodeType": "IndexAccess",
-                                            "baseExpression": {
-                                                "nodeType": "Identifier",
-                                                "name": "balances",
-                                                "typeName": {
-                                                    "nodeType": "ElementaryTypeName",
-                                                    "name": "mapping(address => uint256)"
-                                                }
-                                            },
-                                            "indexExpression": {
-                                                "nodeType": "Identifier",
-                                                "name": "user",
-                                                "typeName": {
-                                                    "nodeType": "ElementaryTypeName",
-                                                    "name": "address"
-                                                }
-                                            }
-                                        },
-                                        "operator": "+",
-                                        "rightExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "points",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "uint256"
-                                            }
-                                        }
+                                "nodeType": "BoilerplateStatement",
+                                "bpSection": "statements",
+                                "bpType": "incrementation",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isMapping": true,
+                                "addend": {
+                                    "nodeType": "Identifier",
+                                    "name": "points",
+                                    "typeName": {
+                                        "nodeType": "ElementaryTypeName",
+                                        "name": "uint256"
                                     }
-                                },
-                                "isVarDec": false
+                                }
                             }
                         ],
                         "postStatements": [
@@ -232,75 +165,62 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
-                                "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
-                                "bpType": "nullification",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "postStatements",
-                                "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "postStatements",
-                                "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "encryption",
+                                "name": "balances_user_0",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ]
                     },
@@ -333,81 +253,79 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
-                                "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
-                                "bpType": "nullification",
-                                "name": "balances_user",
+                                "bpType": "mapping",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "parameters",
-                                "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
-                            },
-                            {
-                                "nodeType": "Boilerplate",
-                                "bpSection": "parameters",
-                                "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
-                                "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
-                                "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
-                                "isNullified": true,
+                                "isPartitioned": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "encryption",
+                                "name": "balances_user_0",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ]
                     },
                     "returnParameters": {
                         "nodeType": "ParameterList",
-                        "parameters": []
+                        "parameters": [
+                            {
+                                "nodeType": "VariableDeclaration",
+                                "name": "balances_user",
+                                "isPrivate": false,
+                                "typeName": {
+                                    "nodeType": "ElementaryTypeName",
+                                    "name": "EncryptedMsgs<3>"
+                                },
+                                "isPartitioned": true
+                            }
+                        ]
                     }
                 }
             ]
@@ -425,13 +343,41 @@
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "mapping",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
                             "initialisationRequired": true,
+                            "newCommitmentValue": "points",
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "mapping",
+                            "name": "balances_user_1",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points",
+                            "mappingName": "balances",
+                            "mappingKeyName": "user"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "mapping",
+                            "name": "balances_user_2",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points",
                             "mappingName": "balances",
                             "mappingKeyName": "user"
                         },
@@ -439,61 +385,109 @@
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "PoKoSK",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "PoKoSK",
+                            "name": "balances_user_1",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "nullification",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "nullification",
+                            "name": "balances_user_1",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "oldCommitmentPreimage",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentPreimage",
+                            "name": "balances_user_1",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "oldCommitmentExistence",
-                            "name": "balances_user",
+                            "name": "balances_user_0",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
+                        },
+                        {
+                            "nodeType": "Boilerplate",
+                            "bpSection": "importStatements",
+                            "bpType": "oldCommitmentExistence",
+                            "name": "balances_user_1",
+                            "id": 7,
+                            "isPartitioned": true,
+                            "isNullified": true,
+                            "isMapping": true,
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         },
                         {
                             "nodeType": "Boilerplate",
                             "bpSection": "importStatements",
                             "bpType": "newCommitment",
-                            "name": "balances_user",
+                            "name": "balances_user_2",
                             "id": 7,
-                            "isWhole": true,
+                            "isPartitioned": true,
                             "isNullified": true,
                             "isMapping": true,
-                            "isAccessed": true,
-                            "initialisationRequired": true
+                            "initialisationRequired": true,
+                            "newCommitmentValue": "points"
                         }
                     ]
                 },
@@ -507,13 +501,41 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user_2",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
@@ -521,121 +543,128 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "nullification",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "preStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "preStatements",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_2",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ],
                         "statements": [
                             {
-                                "nodeType": "ExpressionStatement",
-                                "expression": {
-                                    "nodeType": "Assignment",
-                                    "operator": "=",
-                                    "leftHandSide": {
-                                        "nodeType": "IndexAccess",
-                                        "baseExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "balances",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "mapping(address => uint256)"
-                                            }
-                                        },
-                                        "indexExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "user",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "address"
-                                            }
-                                        }
-                                    },
-                                    "rightHandSide": {
-                                        "nodeType": "BinaryOperation",
-                                        "leftExpression": {
-                                            "nodeType": "IndexAccess",
-                                            "baseExpression": {
-                                                "nodeType": "Identifier",
-                                                "name": "balances",
-                                                "typeName": {
-                                                    "nodeType": "ElementaryTypeName",
-                                                    "name": "mapping(address => uint256)"
-                                                }
-                                            },
-                                            "indexExpression": {
-                                                "nodeType": "Identifier",
-                                                "name": "user",
-                                                "typeName": {
-                                                    "nodeType": "ElementaryTypeName",
-                                                    "name": "address"
-                                                }
-                                            }
-                                        },
-                                        "operator": "-",
-                                        "rightExpression": {
-                                            "nodeType": "Identifier",
-                                            "name": "points",
-                                            "typeName": {
-                                                "nodeType": "ElementaryTypeName",
-                                                "name": "uint256"
-                                            }
-                                        }
+                                "nodeType": "BoilerplateStatement",
+                                "bpSection": "statements",
+                                "bpType": "decrementation",
+                                "name": "balances_user",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isMapping": true,
+                                "subtrahend": {
+                                    "nodeType": "Identifier",
+                                    "name": "points",
+                                    "typeName": {
+                                        "nodeType": "ElementaryTypeName",
+                                        "name": "uint256"
                                     }
-                                },
-                                "isVarDec": false
+                                }
                             }
                         ],
                         "postStatements": [
@@ -643,13 +672,41 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "mapping",
+                                "name": "balances_user_2",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
@@ -657,61 +714,109 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "nullification",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "nullification",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "postStatements",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "postStatements",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_2",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ]
                     },
@@ -744,13 +849,41 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "mapping",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
                                 "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "mapping",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
+                                "mappingName": "balances",
+                                "mappingKeyName": "user"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "mapping",
+                                "name": "balances_user_2",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points",
                                 "mappingName": "balances",
                                 "mappingKeyName": "user"
                             },
@@ -758,61 +891,109 @@
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "PoKoSK",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "PoKoSK",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "nullification",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "nullification",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "oldCommitmentPreimage",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentPreimage",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "oldCommitmentExistence",
-                                "name": "balances_user",
+                                "name": "balances_user_0",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
+                            },
+                            {
+                                "nodeType": "Boilerplate",
+                                "bpSection": "parameters",
+                                "bpType": "oldCommitmentExistence",
+                                "name": "balances_user_1",
+                                "id": 7,
+                                "isPartitioned": true,
+                                "isNullified": true,
+                                "isMapping": true,
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             },
                             {
                                 "nodeType": "Boilerplate",
                                 "bpSection": "parameters",
                                 "bpType": "newCommitment",
-                                "name": "balances_user",
+                                "name": "balances_user_2",
                                 "id": 7,
-                                "isWhole": true,
+                                "isPartitioned": true,
                                 "isNullified": true,
                                 "isMapping": true,
-                                "isAccessed": true,
-                                "initialisationRequired": true
+                                "initialisationRequired": true,
+                                "newCommitmentValue": "points"
                             }
                         ]
                     },
@@ -822,6 +1003,13 @@
                     }
                 }
             ]
+        },
+        {
+            "nodeType": "File",
+            "fileName": "joinCommitments",
+            "fileId": 58,
+            "fileExtension": ".zok",
+            "nodes": []
         }
     ]
 }
