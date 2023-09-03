@@ -131,7 +131,14 @@ export async function service_getCommitmentsByState(req, res, next) {
 	try {
 		const { name, mappingKey } = req.body;
 		const commitments = await getCommitmentsByState(name, mappingKey);
-		res.send({ commitments });
+
+		let totalPoints = 0;
+
+		commitments.forEach((commitment) => {
+			totalPoints += Number(commitment.preimage.value);
+		});
+
+		res.send({ totalPoints, commitments });
 		await sleep(10);
 	} catch (err) {
 		logger.error(err);

@@ -19,3 +19,8 @@ docker-compose -f docker-compose.zapp.yml up -d timber
 sleep 10
 
 docker-compose -f docker-compose.zapp.yml up -d zapp
+
+docker-compose -f docker-compose.zapp.yml up -d request-network-microservice
+
+docker-compose -f docker-compose.zapp.yml up -d dapp
+

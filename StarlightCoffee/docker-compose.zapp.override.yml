@@ -5,19 +5,26 @@ services:
     environment:
       DEFAULT_ACCOUNT: ''
       DEFAULT_ACCOUNT_MNEMONIC: ''
-      RPC_URL: ''
+      RPC_URL: 'wss://alfajores-forno.celo-testnet.org/ws'
       KEY: ''
 
   deployer:
     environment:
       DEFAULT_ACCOUNT: ''
       DEFAULT_ACCOUNT_MNEMONIC: ''
-      RPC_URL: ''
+      RPC_URL: 'wss://alfajores-forno.celo-testnet.org/ws'
       KEY: ''
 
   timber:
     environment:
       DEFAULT_ACCOUNT: ''
       DEFAULT_ACCOUNT_MNEMONIC: ''
-      RPC_URL: ''
+      RPC_URL: 'wss://alfajores-forno.celo-testnet.org/ws'
       KEY: ''
+  request-network-microservice:
+    build:
+      context: ../requestNetworkMicroservice
+      dockerfile: Dockerfile
+    environment:
+      - PAYEE_PRIVATE_KEY=
+      - PAYER_PRIVATE_KEY=

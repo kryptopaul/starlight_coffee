@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the path to the StarlightCoffee directory
+STARLIGHT_COFFEE_DIR=StarlightCoffee
+
+# Check if the directory exists
+if [ -d "$STARLIGHT_COFFEE_DIR" ]; then
+    # Navigate to the directory
+    cd "$STARLIGHT_COFFEE_DIR" || exit 1
+
+    # Check if npm is installed
+    if command -v npm &>/dev/null; then
+        # Run npm start
+        npm start
+    else
+        echo "Error: npm is not installed."
+        exit 1
+    fi
+else
+    echo "Error: The 'StarlightCoffee' directory does not exist."
+    exit 1
+fi

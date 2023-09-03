@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the path to the StarlightCoffee directory
+STARLIGHT_COFFEE_DIR=StarlightCoffee
+
+# Check if the directory exists
+if [ -d "$STARLIGHT_COFFEE_DIR" ]; then
+    # Navigate to the directory
+    cd "$STARLIGHT_COFFEE_DIR" || exit 1
+
+    # Check if the setup script is executable
+    if [ -x "./bin/setup" ]; then
+        # Run the setup script
+        ./bin/setup
+    else
+        echo "Error: The './bin/setup' script is not executable."
+        exit 1
+    fi
+else
+    echo "Error: The 'StarlightCoffee' directory does not exist."
+    exit 1
+fi
